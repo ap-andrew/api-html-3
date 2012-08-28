@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apigee API Reference</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="DxSxC+8ZZ2plsYvnzmdaJvhwyQQhSnwjb0VJwDmxy24=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
+	
+    <!-- <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+       <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+       <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+       <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+       <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"> -->
+
+  </head>
+
+
+  <body>
+
+ <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
+
+        <div class="container">
+            <ul class="nav">
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../index.html">API Resources</a></li>
+              <li><a href="../../api_methods/index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+           <div class="span12">
+			<div>
+</div>
+            <div id="category">Developer and App Administration</div>
+
+<div class="page-header">
+  <h1>Developer App Keys</h1>
+</div>
+<table class="table">
+		<tr>
+  			<td class="lead">/developers/{developerEmail}/apps/{appName}/keys</td>
+		</tr>
+		<tr><td>The consumer key ( or 'API Key') provisioned for an app</td></tr>
+  		<tr><td>Credential pairs consisting of consumer key and consumer secret provisioned by Apigee to apps for specific API products. Apigee maintains the relationship between consumer keys and API products, enabling APi products to be added to and removed from consumer keys. A single consumer key can be used to access multiple API products. Keys may be manually or automatically approved for API products--how they are issued depends on the API product configuration. A key must approved and approved for an API product to be capable of accessing any of the URIs defined in the API product.</td></tr>
+       <!-- <td><div id="well"><pre> {
+  &quot;apiProducts&quot; : [ {
+    &quot;apiproduct&quot; : &quot;ApiProduct&quot;,
+    &quot;status&quot; : &quot;approved&quot;
+  }, {
+    &quot;apiproduct&quot; : &quot;ApiProduct_qa&quot;,
+    &quot;status&quot; : &quot;approved&quot;
+  } ],
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;south&quot;
+  }, {
+    &quot;name&quot; : &quot;country&quot;,
+    &quot;value&quot; : &quot;norway&quot;
+  } ],
+  &quot;consumerKey&quot; : &quot;0F2S7iCWcQ4mDQVGXwS5tgPAGWnNxo0q&quot;,
+  &quot;consumerSecret&quot; : &quot;CciaOUKFPXVgBIGk&quot;,
+  &quot;status&quot; : &quot;approved&quot;
+}</pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
+
+		<tr><td><span class="lead">Approve a Developer App Key</span></td><td><a href="../../api_methods/93-approve-a-developer-app-key/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmal}/apps/{appName}/keys/{consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Changes the status of a consumer key from 'pending' to 'approved'</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Approve API Product for the Key of Developer App</span></td><td><a href="../../api_methods/95-approve-api-product-for-the-key-of-developer-app/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerkey}/apiproducts/{apiproductName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Approves the association of a Developer App's consumer key with an API Product</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Delete a Developer App Key</span></td><td><a href="../../api_methods/91-delete-a-developer-app-key/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">DELETE</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Deletes a consumer key that belongs to an app.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get a specific Key of Developer App</span></td><td><a href="../../api_methods/90-get-a-specific-key-of-developer-app/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Returns details for a consumer key for a developer app</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Revoke a Developer App Key</span></td><td><a href="../../api_methods/92-revoke-a-developer-app-key/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Revokes a developer app key</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Revoke API product association with a specific developer app key</span></td><td><a href="../../api_methods/94-revoke-api-product-association-with-a-specific-developer-app-key/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerkey}/apiproducts/{apiproduct_name}?action=revoke</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Revokes the association of an API Product with a Developer App's consumer key.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Update Key with ApiProduct(s)</span></td><td><a href="../../api_methods/89-update-key-with-apiproduct-s/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/developers/{developerEmail}/apps/{appName}/keys/{consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Adds an API Product to a Developer App Key</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+</tbody>
+</table>
+
+
+
+
+<!-- Schema:
+
+<div id="well"><pre></pre></div> -->
+
+<!-- <div class="form-actions">
+  <a href="/api_resources" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.back">Back</span></a>
+  <a href="/api_resources/18-developer-app-keys/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a> 
+</div> -->
+
+            </div>
+        </div><!--/row-->
+      </div><!--/content-->
+
+       <!-- <footer>
+        <p>&copy; Apigee, Inc. 2012</p>
+      </footer>  -->
+
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
+
+  </body>
+</html>
+
+<!-- Localized -->

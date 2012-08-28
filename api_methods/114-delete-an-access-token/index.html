@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apigee API Reference</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="DxSxC+8ZZ2plsYvnzmdaJvhwyQQhSnwjb0VJwDmxy24=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
+	
+    <!-- <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+       <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+       <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+       <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+       <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"> -->
+
+  </head>
+
+
+  <body>
+
+ <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
+
+        <div class="container">
+            <ul class="nav">
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../../api_resources/index.html">API Resources</a></li>
+              <li><a href="../index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+           <div class="span12">
+			<div>
+</div>
+            
+
+
+<p>
+<h1>Delete an Access Token</h1> 
+</p>
+<div class="lead">
+/oauth2/accesstokens/{accesstoken}
+</div>
+<p>
+  Deletes the Access Token specified
+</p>
+
+<!-- <a href="/api_methods/114-delete-an-access-token/edit" class="btn btn-mini">Edit</a> -->
+
+<p>
+ <b>API Resource:</b>
+  Oauth 2.0 Access Tokens
+</p> 
+
+<p>
+<b>Verb:</b>
+<span class="label label-info">DELETE</span>
+</p>
+
+<p>
+
+</p>
+<b>cURL:</b>
+
+<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{org}/oauth2/accesstokens/{accessToken}</pre>
+</div>
+
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre></pre>
+</div>
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+</div>
+
+<b>Response Payload:</b> 
+<div class="well">
+	<pre>{
+  &quot;apiProducts&quot; : [ &quot;sandbox&quot; ],
+  &quot;app&quot; : &quot;app1&quot;,
+  &quot;attributes&quot; : [ {
+	&quot;name&quot; : &quot;att_n1&quot;,
+	&quot;value&quot; : &quot;att_v1&quot;
+  } ],
+  &quot;clientId&quot; : &quot;fGytmxA5UDajPMdOA5E3bebiBOBPikOT&quot;,
+  &quot;createdAt&quot; : 1343038476540,
+  &quot;createdBy&quot; : &quot;defaultUser&quot;,
+  &quot;expiresAt&quot; : 1343040276540,
+  &quot;grantType&quot; : &quot;password&quot;,
+  &quot;issuedAt&quot; : 1343038476540,
+  &quot;lastModifiedAt&quot; : 1343038476958,
+  &quot;lastModifiedBy&quot; : &quot;defaultUser&quot;,
+  &quot;refreshCount&quot; : 0,
+  &quot;refreshToken&quot; : &quot;1h11770Z&quot;,
+  &quot;scope&quot; : &quot;read&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;taFM3LHUTQAFhL0dIFg81XhRc7vC&quot;,
+  &quot;tokenType&quot; : &quot;BearerToken&quot;
+}
+
+</pre>
+</div>
+
+<b>Response Payload Elements:</b>
+<div><table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		</thead>
+<tr>
+<div class="response_element" id="response_element_69">
+<td>app </td>
+<td>The app for which the access token was generated</td>
+<!-- <td><a href="/response_elements/69" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_70">
+<td>attributes </td>
+<td>Name/value pairs used to extend the default access token profile</td>
+<!-- <td><a href="/response_elements/70" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_71">
+<td>clientId </td>
+<td>The consumer key for the app</td>
+<!-- <td><a href="/response_elements/71" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_72">
+<td>createdAt </td>
+<td>Unix time when the access token was created</td>
+<!-- <td><a href="/response_elements/72" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_73">
+<td>createdBy </td>
+<td>Apigee username of the user who created the access token</td>
+<!-- <td><a href="/response_elements/73" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_74">
+<td>expiresAt </td>
+<td>Unix time when the access token expires</td>
+<!-- <td><a href="/response_elements/74" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_75">
+<td>grantType </td>
+<td>Grant type of the access token: auth code, client_credential, refresh token</td>
+<!-- <td><a href="/response_elements/75" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_76">
+<td>issuedAt </td>
+<td>Unix time when the access token was issued</td>
+<!-- <td><a href="/response_elements/76" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_77">
+<td>lastModifiedAt </td>
+<td>Unix time when the access token last modified</td>
+<!-- <td><a href="/response_elements/77" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_78">
+<td>lastModifiedAt </td>
+<td>Apigee username of the user who last modified the access token</td>
+<!-- <td><a href="/response_elements/78" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_79">
+<td>refreshCount </td>
+<td>Number of times the access token has been refreshed</td>
+<!-- <td><a href="/response_elements/79" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_80">
+<td>refreshToken </td>
+<td>Value of the refresh token</td>
+<!-- <td><a href="/response_elements/80" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_81">
+<td>scope </td>
+<td>OAuth scopes encoded in to the access token</td>
+<!-- <td><a href="/response_elements/81" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_82">
+<td>status </td>
+<td>Status of the access token: 'approved', 'revoked', 'expired'</td>
+<!-- <td><a href="/response_elements/82" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_83">
+<td>tokenType </td>
+<td>Token type: 'bearer'</td>
+<!-- <td><a href="/response_elements/83" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/114-delete-an-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr>
+</table></div>
+
+<b>Errors</b> 
+<div class="well">
+	<pre>Failure 404 with proper error message
+&lt;Error&gt;
+&lt;Code&gt;keymanagement.service.invalid_account_name&lt;/Code&gt;
+&lt;Message&gt;Invalid Access Token&lt;/Message&gt;
+&lt;Contexts/&gt;
+&lt;/Error&gt;</pre>
+</div>
+
+<b>Auth:</b>
+Basic Auth
+</p>
+
+
+
+            </div>
+        </div><!--/row-->
+      </div><!--/content-->
+
+       <!-- <footer>
+        <p>&copy; Apigee, Inc. 2012</p>
+      </footer>  -->
+
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
+
+  </body>
+</html>
+
+<!-- Localized -->

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apigee API Reference</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="DxSxC+8ZZ2plsYvnzmdaJvhwyQQhSnwjb0VJwDmxy24=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
+	
+    <!-- <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+       <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+       <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+       <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+       <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"> -->
+
+  </head>
+
+
+  <body>
+
+ <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
+
+        <div class="container">
+            <ul class="nav">
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../index.html">API Resources</a></li>
+              <li><a href="../../api_methods/index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+    <div class="container">
+      <div class="content">
+        <div class="row">
+           <div class="span12">
+			<div>
+</div>
+            <div id="category">API Analytics</div>
+
+<div class="page-header">
+  <h1>Analytics</h1>
+</div>
+<table class="table">
+		<tr>
+  			<td class="lead">/environments/{environmentName}/stats</td>
+		</tr>
+		<tr><td>Reports on metrics for API usage and performance</td></tr>
+  		<tr><td>Returns metrics based on specified dimensions.
+
+Dimension: The dimension selected from the list of dimension recorded by Apigee. In this example the dimension is API name.
+Metrics: The metric for the chosen dimension. In this example the metric message_count.
+Time range: In this example the time range is July 23 to July 24, 2012. Timestamp is in Unix time (seconds since January 1, 1970, Midnight GMT.)
+
+The dimension is the entity for which Apigee collects metrics. The 'dimension' that is set for this report is 'apis'. There is long list of dimensions that can be used in your reports. Some dimensions of inital interest are:
+
+client_ip: The IP address of the app making the request to your API
+developer: The developer of the app making the request to your API
+developer_app: The name of the app making the request to your API
+access_token: The app end user's OAuth access token
+The function run on the metric in this example is 'sum'. The other functions you can use are sum, average, min, and max.
+
+The metric in this request is 'message_count'.
+
+Other metrics you can use are:
+target_response_time: How long it takes the backend service to respond
+response_status_code: The status code of the response, which is good for measuring specific errors
+message_count: Total number of messages
+request_size: Size if the request message
+response_processing_latency: Duration of processing by the Apigee response pipeline
+response_size: Size of the response message
+request_processing_latency: Duratio nof processing by the Apigee request pipeline.
+total_response_time: Overall duration of processing for Apigee plus the backend service.
+is_error: Defines a message as an error</td></tr>
+       <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
+
+		<tr><td><span class="lead">Get API Statistics</span></td><td><a href="../../api_methods/71-get-api-statistics/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{envname}/stats/apis?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}&amp;sortby={metrics}&amp;sort={order}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve metrics for all the APIs for an organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for an Environment</span></td><td><a href="../../api_methods/77-get-statistics-for-an-environment/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for Top APIs</span></td><td><a href="../../api_methods/72-get-statistics-for-top-apis/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/apis</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for top Apps</span></td><td><a href="../../api_methods/74-get-statistics-for-top-apps/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/apps</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve the metrics for the first five apps for a given customer in a specific organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for top Developers</span></td><td><a href="../../api_methods/75-get-statistics-for-top-developers/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/devs</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve the metrics for developers in a specific organization and environment</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics on all API traffic</span></td><td><a href="../../api_methods/76-get-statistics-on-all-api-traffic/index.html" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environment_name}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Retrieve the metrics for all the available APIs for a given customer in a specific organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+</tbody>
+</table>
+
+
+
+
+<!-- Schema:
+
+<div id="well"><pre></pre></div> -->
+
+<!-- <div class="form-actions">
+  <a href="/api_resources" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.back">Back</span></a>
+  <a href="/api_resources/34-analytics/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a> 
+</div> -->
+
+            </div>
+        </div><!--/row-->
+      </div><!--/content-->
+
+       <!-- <footer>
+        <p>&copy; Apigee, Inc. 2012</p>
+      </footer>  -->
+
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
+
+  </body>
+</html>
+
+<!-- Localized -->
